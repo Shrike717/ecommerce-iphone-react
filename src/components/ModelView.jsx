@@ -1,13 +1,9 @@
 import React, { Suspense } from "react";
 import Lights from "./Lights";
 import Iphone from "./Iphone";
-import {
-  View,
-  PerspectiveCamera,
-  Html,
-  OrbitControls,
-} from "@react-three/drei";
+import { View, PerspectiveCamera, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
+import Loader from "./Loader";
 
 // Hier werden die Models selbst gerendert
 const ModelView = ({
@@ -26,7 +22,7 @@ const ModelView = ({
       id={gsapType} // Das ist der Typ, den wir für die Animation benutzen. Das ist das Target, das wir in der gsap Animation benutzen
       // eslint-disable-next-line tailwindcss/no-unnecessary-arbitrary-value
       //   className={`size-full border-2 border-red-500 ${index === 2 ? "right-[-100%]" : ""}`}
-      className={`size-full  ${index === 2 ? "right-[-100%]" : ""}`}
+      className={`size-full  absolute ${index === 2 ? "right-[-100%]" : ""}`}
     >
       {/* Hier setzen wir ein allgemeines Licht auf die gesamte Szene */}
       <ambientLight intensity={0.3} />{" "}
@@ -54,13 +50,7 @@ const ModelView = ({
         position={[0, 0, 0]}
       >
         {/* Hier setzen wir einen Loader solange das 3-D Modell lädt. Funktioniert nur mit dem Html Element von Three */}
-        <Suspense
-          fallback={
-            <Html>
-              <div>Loading</div>
-            </Html>
-          }
-        >
+        <Suspense fallback={<Loader />}>
           <Iphone
             scale={index === 1 ? [15, 15, 15] : [17, 17, 17]} // Das ist die Größe des Models
             item={item} // Das enthält alle Informationen zum Model
