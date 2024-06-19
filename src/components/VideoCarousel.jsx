@@ -34,7 +34,7 @@ const VideoCarousel = () => {
     // Animation des Sliders beim Eintritt in die Sichtbarkeit
     gsap.to("#slider", {
       transform: `translateX(${-100 * videoId}%)`, // Bewegung des Sliders basierend auf der videoId
-      duration: 2, // Dauer der Animation
+      duration: 1, // Dauer der Animation
       ease: "power2.inOut", // Animationsease
     });
 
@@ -110,11 +110,26 @@ const VideoCarousel = () => {
         anim.restart(); // Neustart der Animation beim ersten Video
       }
 
+      // Funktion zum Aktualisieren des Fortschrittsbalkens. Diese machte Probleme, weil sie Endlos Loops produziert hat
+      //   const animUpdate = () => {
+      //     anim.progress(
+      //       videoRef.current[videoId].currentTime /
+      //         hightlightsSlides[videoId].videoDuration // Aktualisierung des Fortschritts basierend auf der aktuellen Zeit
+      //     );
+      //   };
+
+      // Funktion zum Aktualisieren des Fortschrittsbalkens
       const animUpdate = () => {
-        anim.progress(
-          videoRef.current[videoId].currentTime /
-            hightlightsSlides[videoId].videoDuration // Aktualisierung des Fortschritts basierend auf der aktuellen Zeit
-        );
+        // Wir stellen sicher, dass das Video-Element und die Highlights-Slides vorhanden sind
+        if (videoRef.current[videoId] && hightlightsSlides[videoId]) {
+          const currentTime = videoRef.current[videoId].currentTime; // Aktuelle Zeit des Videos. currentTime ist eine Eigenschaft des Video-Elements
+          const videoDuration = hightlightsSlides[videoId].videoDuration; // Dauer des Videos. videoDuration ist eine Eigenschaft des Highlights-Slides
+
+          // Wir stellen sicher, dass die Dauer des Videos größer als 0 ist. Sonst wird ein Fehler verursacht
+          if (videoDuration > 0) {
+            anim.progress(currentTime / videoDuration); // Aktualisierung des Fortschritts basierend auf der aktuellen Zeit
+          }
+        }
       };
 
       if (isPlaying) {

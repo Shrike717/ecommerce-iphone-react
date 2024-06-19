@@ -32,7 +32,7 @@ const Hero = () => {
   useGSAP(() => {
     // Errzeugt ein neues Tween, das die Opazität des Elements mit der ID `hero` von 0 auf 1 über einen Zeitraum von 1,5 Sekunden ändert
     gsap.to("#hero", { opacity: 1, delay: 2 });
-    gsap.to("#cta", { opacity: 1, y: -50, delay: 2 });
+    gsap.to("#cta", { opacity: 1, y: -50, delay: 3 });
   }, []);
 
   return (
