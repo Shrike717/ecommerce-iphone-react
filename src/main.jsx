@@ -7,13 +7,14 @@ import "./index.css";
 import * as Sentry from "@sentry/react";
 
 // Das sind Konfigurationen, in der wir die Art und Weise einstellen können, wie Sentry unsere App überwacht.
+// ACHTUNG: Nach der Version 8.0.0 funktionieren die Integrations out of the Box und müssen hier aus kommentiert werden.
 Sentry.init({
   dsn: "https://288be3a7c9d948b65ac875622ecefa43@o4507463378206720.ingest.de.sentry.io/4507463542833232",
   integrations: [
     Sentry.browserTracingIntegration(),
-    Sentry.metrics.metricsAggregatorIntegration(), // Das haben wir hinzugefügt
+    //   Sentry.metrics.metricsAggregatorIntegration(), // Das haben wir hinzugefügt
     Sentry.reactRouterV6BrowserTracingIntegration({
-      useEffect: React.useEffect, // Auf diese Weise war es Central, das wäre Reeact benutzen und wie useEffekt funktioniert
+      useEffect: React.useEffect, // Auf diese Weise weiss Sentry, das wäre Reeact benutzen und wie useEffekt funktioniert
     }), // Das haben wir hinzugefügt
     Sentry.replayIntegration(),
   ],

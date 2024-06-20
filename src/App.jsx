@@ -7,6 +7,9 @@ import Highlights from "./components/Highlights";
 import * as Sentry from "@sentry/react";
 
 const App = () => {
+  // Das ist der fehlerhafte Code, um Sentry zu testen:
+  //   return <button onClick={() => methodDoesNotExist()}>Break the world</button>;
+
   return (
     <main className="bg-black">
       <Navbar />
