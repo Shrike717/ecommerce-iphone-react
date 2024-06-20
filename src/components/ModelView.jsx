@@ -25,7 +25,7 @@ const ModelView = ({
       className={`size-full  absolute ${index === 2 ? "right-[-100%]" : ""}`}
     >
       {/* Hier setzen wir ein allgemeines Licht auf die gesamte Szene */}
-      <ambientLight intensity={0.3} />{" "}
+      <ambientLight intensity={0.6} />{" "}
       {/* Das ist das Licht, das gleichmässig von allen Seiten kommt */}
       {/* Hier setzen wir eine Kamera. Diese simuliert das menschliche Auge. */}
       <PerspectiveCamera
