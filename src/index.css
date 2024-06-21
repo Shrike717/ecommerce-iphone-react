@@ -29,14 +29,6 @@ canvas {
   max-width: 1120px;
 }
 
-/* Logik für die die Divider im Footer */
-/* global.css */
-/* @media (min-width: 450px) {
-  .hide-divider {
-    display: none;
-  }
-} */
-
 /* Utilities Klassen */
 @layer utilities {
   .flex-center {
