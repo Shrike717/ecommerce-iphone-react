@@ -110,14 +110,6 @@ const VideoCarousel = () => {
         anim.restart(); // Neustart der Animation beim ersten Video
       }
 
-      // Funktion zum Aktualisieren des Fortschrittsbalkens. Diese machte Probleme, weil sie Endlos Loops produziert hat
-      //   const animUpdate = () => {
-      //     anim.progress(
-      //       videoRef.current[videoId].currentTime /
-      //         hightlightsSlides[videoId].videoDuration // Aktualisierung des Fortschritts basierend auf der aktuellen Zeit
-      //     );
-      //   };
-
       // Funktion zum Aktualisieren des Fortschrittsbalkens
       const animUpdate = () => {
         // Wir stellen sicher, dass das Video-Element und die Highlights-Slides vorhanden sind
@@ -205,7 +197,7 @@ const VideoCarousel = () => {
               </div>
               <div className="absolute left-[5%] top-12 z-10">
                 {list.textLists.map((text) => (
-                  <p key={text} className="text-xl font-medium  md:text-2xl">
+                  <p key={text} className="text-xs sm:text-sm md:text-2xl">
                     {text}
                   </p>
                 ))}

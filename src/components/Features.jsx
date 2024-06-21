@@ -79,7 +79,7 @@ const Features = () => {
               {/* Setzt die Textgröße auf 5xl, ändert sie auf 7xl bei großen Bildschirmen und macht den Text fett */}
               iPhone.
             </h2>
-            <h2 className="text-5xl lg:text-7xl font-semibold">
+            <h2 className="text-3xl lg:text-7xl font-semibold">
               {/* Wiederholt das Styling für einen konsistenten Look */}
               Forged in titanium.
             </h2>
