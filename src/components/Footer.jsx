@@ -29,13 +29,13 @@ const Footer = () => {
         {/* Trennlinie mit neutraler Farbe 700, vertikalem Margin von 5, Höhe von 1 Pixel und voller Breite */}
 
         {/* Footer Links */}
-        <div className="flex md:flex-row flex-col md:items-center justify-between">
+        <div className="flex md:flex-row flex-col md:items-center justify-between items-center sm:items-start">
           {/* Container für Footer-Links mit flexibler Anordnung: spaltenweise auf kleinen Bildschirmen, zeilenweise mit zentrierten Elementen auf größeren Bildschirmen und Inhalten, die den verfügbaren Raum zwischen ihnen aufteilen */}
-          <p className="font-semibold text-gray text-xs">
+          <p className="font-semibold text-gray text-xs ">
             {/* Paragraf mit halbfetter Schrift, grauer Farbe und extra kleiner Schriftgröße */}
             Copyright @ 2024 Apple Inc. All rights reserved.
           </p>
-          <div className="flex">
+          <div className="bp450:flex flex-row items-center hidden">
             {/* Container für Links mit flexibler Anordnung */}
             {footerLinks.map((link, index) => (
               <p key={link} className="font-semibold text-gray text-xs">

@@ -13,6 +13,9 @@ export default {
         },
         zinc: "#101010",
       },
+      screens: {
+        bp450: "450px",
+      },
     },
   },
   plugins: [],
