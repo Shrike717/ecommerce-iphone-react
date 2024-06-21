@@ -26,7 +26,6 @@ export const animateWithGsapTimeline = (
   secondTarget,
   animationProps
 ) => {
-  console.log("[animations.js] firstTarget:", firstTarget);
   // Hier setzen wir die Animation für die Rotation des Models.
   timeline.to(rotationRef.current.rotation, {
     y: rotationState,
