@@ -70,6 +70,7 @@ const Features = () => {
           </h1>
         </div>
 
+        {/* Ünerschriften */}
         <div className="flex flex-col justify-center items-center overflow-hidden">
           {/* Erstellt einen flexiblen Container, der seine Kinder vertikal anordnet, zentriert die Kinder sowohl horizontal als auch vertikal und verhindert das Überlaufen von Inhalten */}
           <div className="mt-32 mb-24 pl-24">
@@ -84,6 +85,7 @@ const Features = () => {
             </h2>
           </div>
 
+          {/* Video */}
           <div className="flex-center flex-col sm:px-10">
             {/* Zentriert Inhalte, ordnet Kinder vertikal an und setzt horizontalen Padding auf 10 Einheiten bei kleinen Bildschirmen */}
             <div className="relative h-[50vh] w-full flex items-center">
@@ -102,6 +104,7 @@ const Features = () => {
               </video>
             </div>
 
+            {/* Bilder */}
             <div className="flex flex-col w-full relative">
               {/* Erstellt einen flexiblen Container, der seine Kinder vertikal anordnet, setzt die Breite auf 100% des Elternelements und positioniert den Container relativ */}
               <div className="feature-video-container">
@@ -125,6 +128,7 @@ const Features = () => {
                 </div>
               </div>
 
+              {/* Texte */}
               <div className="feature-text-container">
                 {/* Verwendet eine benutzerdefinierte Klasse "feature-text-container" für Styling, das nicht direkt ersichtlich ist */}
                 <div className="flex-1 flex-center">
@@ -149,7 +153,7 @@ const Features = () => {
                     any metal, making these our{" "}
                     <span className="text-white">
                       {/* Setzt die Textfarbe auf Weiß */}
-                      lightest Pro models ever.
+                      lightest Pro models ever.{" "}
                     </span>
                     You'll notice the difference the moment you pick one up.
                   </p>
