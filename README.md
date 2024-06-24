@@ -1,4 +1,4 @@
-# Ecommerce - Iphone
+# E-commerce - Iphone
 
 Ecommerce - Iphone is an e-commerce app specifically developed for selling the iPhone 15 Pro. This app is a clone of the official Apple website for the iPhone 15 Pro and was created as a practice project to learn how to create animations using GSAP and incorporate a 3D model of the iPhone using ThreeJS and React Three Fiber (R3F).
 
